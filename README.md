@@ -4,23 +4,41 @@ This is the repository of the Technical Support team at Planet. It contains all 
 
 ## Getting Started
 
-git clone --repository address
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development.
 
 ### Prerequisites
 
-For Python:
+####SSH Keys:
 
-pip install planet
-
-What things you need to install the software and how to install them
+* If you don't have a SHH key pair, create one running the following command in a new terminal:
 
 ```
-Give examples
+cd ~
+mkdir .ssh/save
+mv .ssh/id_* .ssh/save/
+ssh-keygen -t rsa -b 4096
 ```
+This will move any previously existing keys to a the folder .ssh/save/ just in case. Take the default options and enter a passfrase when asked.
+
+* If you do have a key or after creating one, retrieve it key by running:
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+####Planet Github account:
+
+* Go to [GitHub](https://github.com/) and create your own account using your Planet email address (you can use any username you want).
+* Update your profile at [https://hello.planet.com/update](https://hello.planet.com/update) with the contents of your new SSH key and your github username.
+* Update your profile at [GitHub](https://github.com/) with your SSH key.
+* Within one hours, you should receive an invitation to Planet Labs GitHub account by email. Click the link on the email to accept the invitation.
+* If the email does not arrive withing 24 hours, file a ticket at [CorpEng](https://go.planet.com/help).
 
 ### Installing
+
+--- then clone the repo
+
+git clone --repository address
 
 A step by step series of examples that tell you have to get a development env running
 
@@ -38,46 +56,27 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Running the scripts
+This are instruction on what you will need to run our scripts.
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+### For Python
 
 ```
-Give an example
+pip install planet
 ```
 
-### And coding style tests
+### For PHP
 
-Explain what these tests test and why
+### For SQL
 
-```
-Give an example
-```
+### For R
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
+* [Grischa Großmann](mailto:grischa.grossmann@planet.com)
+* [Shashank Kaushik](mailto:shashank@planet.com)
+* [Pooja Pandey](mailto:pooja.pandey@planet.com)
 * [Luis Peraza](mailto:luis.peraza@planet.com)
 
 
